@@ -30,19 +30,19 @@ def enterMoney():
     return
   if amount.isdigit():
     if int(amount) == 0:
-      print "You didnt put any money in!"
+      print "\nYou didnt put any money in!"
       enterMoney()
     else:
       global money
       money = money + int(amount)
       print "You balance is $" + str(money)
   else:
-    print "Please enter a valid amount (Exp: 2, 5, 10)"
+    print "\nPlease enter a valid amount (Exp: 2, 5, 10)"
     enterMoney()
 
 #This function defines which letter the user picks
 def getLetter():
-  print "A: Chips\nB: Gum\nC: Chocolate Bars\nD: Snack Cakes\nE: Protein Bars"
+  print "\nA: Chips\nB: Gum\nC: Chocolate Bars\nD: Snack Cakes\nE: Protein Bars"
   ll = input("Enter the letter to the item you wish to get: ")
   l = ll.lower()
   global letter
@@ -76,19 +76,19 @@ def getLetter():
 
 #This function defines the number that the user picks
 def getNumber():
-  n = input("Please enter the number to the item you want")
+  n = input("\nPlease enter the number to the item you want")
   if n[0] == " ":
-    print "Please input a valid number to the item you want (1-5)"
+    print "\nPlease input a valid number to the item you want (1-5)"
     getNumber()
   if n.isdigit():
     if int(n) >= 1 and int(n) <= 5:
       global number
       number = n
     else:
-      print "Please input a valid number to the item you want (1-5)"
+      print "\nPlease input a valid number to the item you want (1-5)"
       getNumber()
   else:
-    print "Please input a valid number to the item you want (1-5)"
+    print "\nPlease input a valid number to the item you want (1-5)"
     getNumber()
       
   
